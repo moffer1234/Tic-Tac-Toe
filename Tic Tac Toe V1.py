@@ -96,10 +96,11 @@ def check_win():
     
     return False
 
-# NEED TO FIX - win asker asks if you want to play another round, and repeats the function
+# the main loop, which repeats the guessSeq function until a player wins or the game is a draw.
 while programQuit == False:
     if not inRow:
         inRow = guessSeq()
        
        
+
 
