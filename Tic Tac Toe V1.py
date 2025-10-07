@@ -16,11 +16,9 @@ table = [
 ]
 
 # prints the intro
-print("WELCOME TO MY VERY UNINTELLIGENT TIC TAC TOE!")
-print("I COULDN'T IMPLEMENT A WIN RECOGNIZING FEATURE")
-print("SO YOU HAVE TO SAY WHEN YOU ARE FINISHED PLAYING!")
+print("WELCOME TO MY TIC TAC TOE!")
 print("\nGET READY!")
-sleep(2.0)
+sleep(1.0)
 
 # the whole process is made into a function, to make repeating easy!
 def guessSeq(): 
@@ -44,7 +42,7 @@ def guessSeq():
 
 # prints user letter choice and takes coordinates from the user
     print("you entered", lastInputPrint)
-    lastCoOrd = str(input("enter your coordinates for ur guess... top left = 0,0, etc... SEPERATE BY A COMMA\n"))
+    lastCoOrd = str(input("which coordinates? please separate by a comma (e.g. 0,0 top left)\n"))
     
 # splits the user's input for coords and reads them back.
     lastCoOrdSplit = lastCoOrd.split(",")
@@ -61,7 +59,7 @@ def guessSeq():
 
 
 # takes the coordinates from the user input and alters the table accordingly
-    table[int(lastCoOrdSplit[0])][int(lastCoOrdSplit[1])] = lastInputPrint
+    table[int(lastCoOrdSplit[1])][int(lastCoOrdSplit[0])] = lastInputPrint
 # prints the table
     for row in table:
         print(row)
@@ -104,3 +102,4 @@ while programQuit == False:
         inRow = guessSeq()
        
        
+
